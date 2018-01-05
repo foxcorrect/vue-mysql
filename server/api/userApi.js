@@ -23,9 +23,9 @@ var jsonWrite = function(res, ret) {
 router.post('/addUser', (req, res) => {
     console.log(req.body);
     var sql = $sql.user.addUser;    
-    var params = req.query;    
+    var params = req.body;    
     console.log(params);
-    conn.query(sql, [params.username,params.age], function(err, result) {    
+    conn.query(sql, [params.id,params.username,params.age], function(err, result) {    
         if (err) {       
             console.log(err);
         }        
@@ -53,6 +53,7 @@ router.get('/getALL',(req,res)=>{
 router.delete('/deleteUser',(req,res)=>{
     var sql = $sql.user.deleteUser;
     var params = req.query;
+    console.log(req);
     conn.query(sql,[params.id],function(err,result){
         if(err){
             console.log(err);
