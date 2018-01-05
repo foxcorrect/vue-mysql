@@ -1,6 +1,7 @@
 # sqltest
 
 > testsql
+> vue+mysql+express+iview
 
 ## Build Setup
 
@@ -36,3 +37,5 @@ index负责调用api，启动后台文件
 #src部分是前端
 
 #弊端是无法用一条命令实现前后端一起构建，解决方法是有的，还未写入
+
+#这个实例还结合了iview，方便使用一些组件。vuex目录下的文件可以忽略，在另外的实例中，结合了Vuex进行状态管理。
